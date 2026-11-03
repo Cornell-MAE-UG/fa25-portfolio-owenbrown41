@@ -1,0 +1,19 @@
+<svg viewBox="0 0 380 250" role="img" aria-label="Max von Mises stress versus mesh size. Baseline rises from 30 to 52 MPa; new design rises from 53 to 103 MPa and was still climbing about 7 percent at the last refinement."><line class="gridline" x1="46" x2="302" y1="210.0" y2="210.0"/><text class="tick" x="38" y="214.0" text-anchor="end">0</text><line class="gridline" x1="46" x2="302" y1="180.7" y2="180.7"/><text class="tick" x="38" y="184.7" text-anchor="end">20</text><line class="gridline" x1="46" x2="302" y1="151.3" y2="151.3"/><text class="tick" x="38" y="155.3" text-anchor="end">40</text><line class="gridline" x1="46" x2="302" y1="122.0" y2="122.0"/><text class="tick" x="38" y="126.0" text-anchor="end">60</text><line class="gridline" x1="46" x2="302" y1="92.7" y2="92.7"/><text class="tick" x="38" y="96.7" text-anchor="end">80</text><line class="gridline" x1="46" x2="302" y1="63.3" y2="63.3"/><text class="tick" x="38" y="67.3" text-anchor="end">100</text><line class="gridline" x1="46" x2="302" y1="34.0" y2="34.0"/><text class="tick" x="38" y="38.0" text-anchor="end">120</text><text class="tick" x="46.0" y="228" text-anchor="middle">14</text><text class="tick" x="131.3" y="228" text-anchor="middle">20</text><text class="tick" x="216.7" y="228" text-anchor="middle">26</text><text class="tick" x="302.0" y="228" text-anchor="middle">32</text><line class="axis" x1="46" x2="302" y1="210" y2="210"/><text class="axis-label" x="174.0" y="246" text-anchor="middle">Mesh size (thousand elements)</text><text class="axis-label" x="38" y="22" text-anchor="start" transform="">Max von Mises stress (MPa)</text><polyline class="line s-a" points="86.0,165.6 107.9,155.4 154.8,139.5 237.4,133.1"/><polyline class="line s-b" points="57.8,132.9 68.1,113.4 98.2,88.7 158.6,70.4 299.0,59.6"/><circle class="hit" cx="86.0" cy="165.6" r="12" tabindex="0" data-tip="Baseline
+16,811 elements
+30.2 MPa"/><circle class="dot s-a" cx="86.0" cy="165.6" r="4.5"/><circle class="hit" cx="107.9" cy="155.4" r="12" tabindex="0" data-tip="Baseline
+18,353 elements
+37.2 MPa"/><circle class="dot s-a" cx="107.9" cy="155.4" r="4.5"/><circle class="hit" cx="154.8" cy="139.5" r="12" tabindex="0" data-tip="Baseline
+21,647 elements
+48.1 MPa"/><circle class="dot s-a" cx="154.8" cy="139.5" r="4.5"/><circle class="hit" cx="237.4" cy="133.1" r="12" tabindex="0" data-tip="Baseline
+27,457 elements
+52.5 MPa"/><circle class="dot s-a" cx="237.4" cy="133.1" r="4.5"/><text class="lbl" x="245.4" y="137.1" text-anchor="start">Baseline</text><circle class="hit" cx="57.8" cy="132.9" r="12" tabindex="0" data-tip="New design
+14,833 elements
+52.5 MPa"/><circle class="dot s-b" cx="57.8" cy="132.9" r="4.5"/><circle class="hit" cx="68.1" cy="113.4" r="12" tabindex="0" data-tip="New design
+15,555 elements
+65.9 MPa"/><circle class="dot s-b" cx="68.1" cy="113.4" r="4.5"/><circle class="hit" cx="98.2" cy="88.7" r="12" tabindex="0" data-tip="New design
+17,668 elements
+82.7 MPa"/><circle class="dot s-b" cx="98.2" cy="88.7" r="4.5"/><circle class="hit" cx="158.6" cy="70.4" r="12" tabindex="0" data-tip="New design
+21,919 elements
+95.2 MPa"/><circle class="dot s-b" cx="158.6" cy="70.4" r="4.5"/><circle class="hit" cx="299.0" cy="59.6" r="12" tabindex="0" data-tip="New design
+31,789 elements
+102.5 MPa"/><circle class="dot s-b" cx="299.0" cy="59.6" r="4.5"/><text class="lbl" x="297.0" y="49.6" text-anchor="end">My design</text></svg>

@@ -1,0 +1,19 @@
+<svg viewBox="0 0 380 250" role="img" aria-label="Max deformation versus mesh size. Baseline settles at 0.111 mm; new design settles at 0.189 mm, both changing under 0.2 percent at the last refinement."><line class="gridline" x1="46" x2="302" y1="210.0" y2="210.0"/><text class="tick" x="38" y="214.0" text-anchor="end">0.10</text><line class="gridline" x1="46" x2="302" y1="174.8" y2="174.8"/><text class="tick" x="38" y="178.8" text-anchor="end">0.12</text><line class="gridline" x1="46" x2="302" y1="139.6" y2="139.6"/><text class="tick" x="38" y="143.6" text-anchor="end">0.14</text><line class="gridline" x1="46" x2="302" y1="104.4" y2="104.4"/><text class="tick" x="38" y="108.4" text-anchor="end">0.16</text><line class="gridline" x1="46" x2="302" y1="69.2" y2="69.2"/><text class="tick" x="38" y="73.2" text-anchor="end">0.18</text><line class="gridline" x1="46" x2="302" y1="34.0" y2="34.0"/><text class="tick" x="38" y="38.0" text-anchor="end">0.20</text><text class="tick" x="46.0" y="228" text-anchor="middle">14</text><text class="tick" x="131.3" y="228" text-anchor="middle">20</text><text class="tick" x="216.7" y="228" text-anchor="middle">26</text><text class="tick" x="302.0" y="228" text-anchor="middle">32</text><line class="axis" x1="46" x2="302" y1="210" y2="210"/><text class="axis-label" x="174.0" y="246" text-anchor="middle">Mesh size (thousand elements)</text><text class="axis-label" x="38" y="22" text-anchor="start" transform="">Max deformation (mm)</text><polyline class="line s-a" points="86.0,193.8 107.9,192.1 154.8,191.6 237.4,191.4"/><polyline class="line s-b" points="57.8,59.1 68.1,54.8 98.2,54.3 158.6,53.8 299.0,53.8"/><circle class="hit" cx="86.0" cy="193.8" r="12" tabindex="0" data-tip="Baseline
+16,811 elements
+0.10923 mm"/><circle class="dot s-a" cx="86.0" cy="193.8" r="4.5"/><circle class="hit" cx="107.9" cy="192.1" r="12" tabindex="0" data-tip="Baseline
+18,353 elements
+0.11015 mm"/><circle class="dot s-a" cx="107.9" cy="192.1" r="4.5"/><circle class="hit" cx="154.8" cy="191.6" r="12" tabindex="0" data-tip="Baseline
+21,647 elements
+0.11048 mm"/><circle class="dot s-a" cx="154.8" cy="191.6" r="4.5"/><circle class="hit" cx="237.4" cy="191.4" r="12" tabindex="0" data-tip="Baseline
+27,457 elements
+0.11058 mm"/><circle class="dot s-a" cx="237.4" cy="191.4" r="4.5"/><text class="lbl" x="245.4" y="195.4" text-anchor="start">Baseline</text><circle class="hit" cx="57.8" cy="59.1" r="12" tabindex="0" data-tip="New design
+14,833 elements
+0.18576 mm"/><circle class="dot s-b" cx="57.8" cy="59.1" r="4.5"/><circle class="hit" cx="68.1" cy="54.8" r="12" tabindex="0" data-tip="New design
+15,555 elements
+0.18819 mm"/><circle class="dot s-b" cx="68.1" cy="54.8" r="4.5"/><circle class="hit" cx="98.2" cy="54.3" r="12" tabindex="0" data-tip="New design
+17,668 elements
+0.18848 mm"/><circle class="dot s-b" cx="98.2" cy="54.3" r="4.5"/><circle class="hit" cx="158.6" cy="53.8" r="12" tabindex="0" data-tip="New design
+21,919 elements
+0.18877 mm"/><circle class="dot s-b" cx="158.6" cy="53.8" r="4.5"/><circle class="hit" cx="299.0" cy="53.8" r="12" tabindex="0" data-tip="New design
+31,789 elements
+0.18874 mm"/><circle class="dot s-b" cx="299.0" cy="53.8" r="4.5"/><text class="lbl" x="297.0" y="43.8" text-anchor="end">My design</text></svg>
