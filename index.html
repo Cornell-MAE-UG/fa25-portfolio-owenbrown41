@@ -1,0 +1,73 @@
+---
+layout: default
+title: Owen Brown
+body_class: home
+---
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div class="hero-copy">
+      <p class="eyebrow mono"><span>Mechanical Engineering</span><span>Cornell University</span><span>Class of 2028</span></p>
+      <h1 class="hero-title">Owen<br>Brown</h1>
+      <p class="hero-lede">I design, simulate, and take things apart to see how they work, from e-bike frames to drones. I also row lightweight for Cornell and coach whenever I'm not in the boat.</p>
+      <div class="hero-actions">
+        <a class="btn btn-solid" href="#work">See my work</a>
+        <a class="btn" href="{{ '/cv/' | relative_url }}">Read my CV</a>
+      </div>
+    </div>
+    <figure class="hero-photo">
+      <img src="{{ '/assets/images/DSC06537-Enhanced-NR.jpg' | relative_url }}" alt="Owen rowing in the stroke seat for Cornell lightweight crew">
+      <figcaption class="mono">Stroke seat, Cornell Lightweight Crew</figcaption>
+    </figure>
+  </div>
+</section>
+
+<section id="work" class="section">
+  <div class="wrap">
+    <div class="section-head">
+      <h2 class="section-title">Selected work</h2>
+      <p class="mono muted">Simulation, design, and dissection</p>
+    </div>
+    {% assign projects = site.projects | sort: "order" %}
+    <ol class="cards">
+      {% for p in projects %}
+      <li class="card">
+        <a class="card-link" href="{{ p.url | relative_url }}">
+          <div class="card-media">
+            {% if p.image %}
+            <img src="{{ p.card_image | default: p.image | relative_url }}" alt="" loading="lazy">
+            {% elsif p.art == "flow" %}
+            {% include flow-art.svg %}
+            {% else %}
+            {% include linkage-art.svg %}
+            {% endif %}
+            {% if p.status %}<span class="pill mono">{{ p.status }}</span>{% endif %}
+          </div>
+          <div class="card-body">
+            <p class="card-meta mono"><span class="card-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>{% if p.course %} · {{ p.course }}{% endif %}{% if p.term %} · {{ p.term }}{% endif %}</p>
+            <h3 class="card-title">{{ p.title }}</h3>
+            <p class="card-text">{{ p.description }}</p>
+            <span class="card-cta mono">Open project &rarr;</span>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
+
+<section id="about" class="section section-about">
+  <div class="wrap about-grid">
+    <h2 class="section-title">About</h2>
+    <div class="about-copy">
+      <p>I'm a junior studying mechanical engineering at Cornell, class of 2028. I row on the men's lightweight crew team, where I sit in the stroke seat.</p>
+      <p>I've spent the last two summers coaching. In 2025 I was head coach at the Anchorage Rowing Association in Alaska, running a program of about 50 rowers. In 2026 I came home to coach the varsity boys at Princeton National Rowing Association, the junior program I grew up rowing for.</p>
+      <p>On the engineering side, I'm narrowing my interests toward drone design. Outside of class and the boathouse, I sing a cappella with The Men of Last Call and spend as much time outdoors as I can.</p>
+    </div>
+    <dl class="facts">
+      <div><dt class="mono">Studying</dt><dd>B.S. Mechanical Engineering, Cornell '28</dd></div>
+      <div><dt class="mono">Focus</dt><dd>Drone design, structural simulation</dd></div>
+      <div><dt class="mono">Tools</dt><dd>Fusion 360, Ansys Workbench, Rhino, Python</dd></div>
+      <div><dt class="mono">Coaching</dt><dd>Anchorage Rowing Association (2025) · Princeton National Rowing Association (2026)</dd></div>
+    </dl>
+  </div>
+</section>

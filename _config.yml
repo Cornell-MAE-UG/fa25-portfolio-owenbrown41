@@ -10,10 +10,11 @@
 locale                   : "en-US"
 title                    : Owen Brown
 title_separator          : "-"
-subtitle                 : # site tagline that appears below site title in masthead
+subtitle                 : "Mechanical Engineering · Cornell University" # site tagline that appears below site title in masthead
 name                     : Owen Brown
-description              : Owen Brown - Projects and CV 
-baseurl                  : "fall2025-portfolio-Brown" # Set this to your repo name 
+description              : "Owen Brown — mechanical engineering projects, analysis, and CV"
+url                      : "https://cornell-mae-ug.github.io"
+baseurl                  : "/fa25-portfolio-owenbrown41" # Set this to your repo name 
 
 # Theme and Style
 theme: jekyll-theme-minimal
