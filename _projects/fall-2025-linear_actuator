@@ -1,9 +1,0 @@
----
-layout: project
-title: 2025-Linear_actuator
-description: Simple statics project
-technologies: Brain
-image: /workspaces/fa25-portfolio-owenbrown41/assets/images/Screenshot 2025-10-10 at 8.36.38 PM.png
----
-For this class project we had to design a mechanism with a rigid bar of a fixed length, 3 pin supports of which two need to be mounted on the ground and a linear
-actuator. Our mechanism was supposed to lift the heaviest possible mass the furthest distance off the ground. I made two designs, one that lifted the heaviest possible mass and one that lifted a lighter mass a further distance.
