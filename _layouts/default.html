@@ -3,49 +3,70 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>{{ page.title }}</title>
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap-icons/1.10.0/font/bootstrap-icons.min.css">
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
+  <meta name="color-scheme" content="light dark">
+  {% seo %}
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Archivo:ital,wdth,wght@0,62..125,300..900;1,62..125,300..900&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="{{ '/assets/css/main.css' | relative_url }}">
 </head>
+<body class="{{ page.body_class | default: 'page' }}">
 
-<body>
-
-  <header>
-    <nav class="navbar navbar-expand-lg navbar-dark text-white";>
-      <div class="container-fluid">
-        <a class="navbar-brand" href="{{ "/" | relative_url }}">{{ site.title }}</a>
-        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"> 
-          <span class="navbar-toggler-icon"></span>
-        </button>  
-        <div class="collapse navbar-collapse" id="navbarNav">
-          <ul class="navbar-nav ms-auto">
-            <li class="nav-item">
-              <a class="nav-link {% if page.url == '/' %}active{% endif %}" href="{{ "/" | relative_url }}">Home</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link {% if page.url == '/projects/' %}active{% endif %}" href="{{ "/projects/" | relative_url }}">Projects</a>
-            </li> 
-            <li class="nav-item">
-              <a class="nav-link {% if page.url == '/cv/' %}active{% endif %}" href="{{ "/cv/" | relative_url }}">CV</a>
-            </li>
-          </ul>
-        </div>
-      </div>
-    </nav>
+  <header class="site-header">
+    <div class="wrap header-inner">
+      <a class="brand" href="{{ '/' | relative_url }}">
+        <span class="brand-mark" aria-hidden="true"></span>
+        <span class="brand-name">{{ site.name }}</span>
+      </a>
+      <nav class="site-nav" aria-label="Main">
+        <a href="{{ '/' | relative_url }}#work" {% if page.url contains '/projects/' %}aria-current="page"{% endif %}>Work</a>
+        <a href="{{ '/' | relative_url }}#about">About</a>
+        <a href="{{ '/cv/' | relative_url }}" {% if page.url == '/cv/' %}aria-current="page"{% endif %}>CV</a>
+      </nav>
+    </div>
   </header>
-  
-  
-  <main class="container">
+
+  <main id="main">
     {{ content }}
   </main>
 
-  <footer class="footer navbar-dark text-white text-center";>
-    <div class="container">
-      &copy; 2024 {{ site.name }}. All rights not reserved.
+  <footer class="site-footer">
+    <div class="wrap footer-inner">
+      <div>
+        <p class="footer-name">{{ site.name }}</p>
+        <p class="mono muted">Mechanical Engineering · Cornell University · Class of 2028</p>
+      </div>
+      <div class="footer-links mono">
+        <a href="mailto:obb22@cornell.edu">obb22@cornell.edu</a>
+        <a href="{{ '/cv/' | relative_url }}">CV</a>
+        <a href="{{ '/projects/' | relative_url }}">All projects</a>
+      </div>
     </div>
   </footer>
 
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+  <div class="tip" role="tooltip" hidden></div>
+  <script>
+    // Tooltips for chart points: any element with data-tip shows it on hover or keyboard focus.
+    (function () {
+      var tip = document.querySelector('.tip');
+      if (!tip) return;
+      function show(el) {
+        tip.textContent = el.getAttribute('data-tip');
+        tip.hidden = false;
+        var r = el.getBoundingClientRect();
+        var x = r.left + r.width / 2 + window.scrollX;
+        var y = r.top + window.scrollY - 10;
+        tip.style.left = Math.max(8, Math.min(x - tip.offsetWidth / 2, document.documentElement.clientWidth - tip.offsetWidth - 8)) + 'px';
+        tip.style.top = (y - tip.offsetHeight) + 'px';
+      }
+      function hide() { tip.hidden = true; }
+      document.querySelectorAll('[data-tip]').forEach(function (el) {
+        el.addEventListener('mouseenter', function () { show(el); });
+        el.addEventListener('focus', function () { show(el); });
+        el.addEventListener('mouseleave', hide);
+        el.addEventListener('blur', hide);
+      });
+    })();
+  </script>
 </body>
 </html>

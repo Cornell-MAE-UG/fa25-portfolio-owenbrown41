@@ -1,15 +1,47 @@
 ---
 layout: default
 ---
+<article class="project">
+  <header class="project-head wrap">
+    <a class="back mono" href="{{ '/' | relative_url }}#work">&larr; All work</a>
+    <p class="eyebrow mono">
+      {% if page.course %}<span>{{ page.course }}</span>{% endif %}
+      {% if page.term %}<span>{{ page.term }}</span>{% endif %}
+      {% if page.status %}<span class="status">{{ page.status }}</span>{% endif %}
+    </p>
+    <h1 class="project-title">{{ page.title }}</h1>
+    {% if page.description %}<p class="lede">{{ page.description }}</p>{% endif %}
+    {% if page.technologies %}
+    <ul class="tags" aria-label="Tools used">
+      {% for t in page.technologies %}<li>{{ t }}</li>{% endfor %}
+    </ul>
+    {% endif %}
+  </header>
 
-<h1>{{ page.title }}</h1>
+  {% if page.image %}
+  <figure class="project-hero wrap-wide">
+    <img src="{{ page.image | relative_url }}" alt="{{ page.imagealt | default: page.title }}">
+    {% if page.imagecaption %}<figcaption class="mono">{{ page.imagecaption }}</figcaption>{% endif %}
+  </figure>
+  {% endif %}
 
-<p><img src="{{ page.image | relative_url }}" alt="{{ page.imagealt }}" class="project-image" /></p>
+  {% if page.stats %}
+  <dl class="stats wrap">
+    {% for s in page.stats %}
+    <div class="stat">
+      <dt class="mono">{{ s.label }}</dt>
+      <dd><span class="stat-value">{{ s.value }}</span>{% if s.unit %}<span class="stat-unit">{{ s.unit }}</span>{% endif %}</dd>
+      {% if s.note %}<p class="stat-note">{{ s.note }}</p>{% endif %}
+    </div>
+    {% endfor %}
+  </dl>
+  {% endif %}
 
-{{ content }}
+  <div class="prose wrap">
+    {{ content }}
+  </div>
 
-<p><strong>Technologies Used</strong>: {{ page.technologies | join: ", " }}</p>
-
-<a href={{ "/projects/" | relative_url }} class="back-arrow">
-    <i class="bi bi-arrow-left-circle-fill"></i> Back to Projects
-</a>
+  <nav class="project-foot wrap" aria-label="Projects">
+    <a class="btn" href="{{ '/' | relative_url }}#work">&larr; Back to all work</a>
+  </nav>
+</article>
