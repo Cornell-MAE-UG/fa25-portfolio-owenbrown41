@@ -434,3 +434,33 @@ details.data summary { cursor: pointer; color: var(--muted); font-family: var(--
     background-position: 50% 0, 50% 0;
   }
 }
+
+// ---------- Last Call A Cappella section (home page) ----------
+.section-music { background: #121315; color: #eceae6; border-top: 1px solid #121315; }
+.music-grid { display: grid; grid-template-columns: 1.15fr 1fr; gap: 56px; align-items: center; }
+.music-photo { margin: 0; }
+.music-photo img { width: 100%; border-radius: var(--radius); box-shadow: 0 20px 50px -20px rgba(0, 0, 0, 0.8); }
+.music-photo figcaption { margin-top: 10px; color: #8d929b; }
+.section-music .eyebrow { color: #8d929b; }
+.section-music .eyebrow span + span::before { background: #3a3e45; }
+.section-music .section-title { color: #fff; margin-bottom: 18px; }
+.music-lede { font-size: 1.15rem; line-height: 1.55; color: #c9ccd2; margin: 0 0 28px; max-width: 46ch; }
+.music-blocks { display: grid; gap: 0; border-top: 1px solid #2a2e35; }
+.music-block { display: grid; grid-template-columns: 140px 1fr; gap: 16px; padding: 16px 0; border-bottom: 1px solid #2a2e35; }
+.music-block h3 { margin: 3px 0 0; color: #f0875a; text-transform: uppercase; font-weight: 600; font-size: 0.74rem; letter-spacing: 0.06em; }
+.music-block ul { list-style: none; margin: 0; padding: 0; display: grid; gap: 8px; }
+.music-block li { color: #dcdee2; line-height: 1.45; }
+.music-block strong { color: #fff; font-weight: 600; }
+.tag-done, .tag-wip {
+  display: inline-block; margin-left: 6px; padding: 2px 8px; border-radius: 999px;
+  font-size: 0.66rem; text-transform: uppercase; vertical-align: 2px;
+}
+.tag-done { background: #e6622d; color: #121315; font-weight: 600; }
+.tag-wip { border: 1px dashed #5a5f68; color: #a3a8b0; }
+
+@media (max-width: 900px) {
+  .music-grid { grid-template-columns: 1fr; gap: 32px; }
+}
+@media (max-width: 640px) {
+  .music-block { grid-template-columns: 1fr; gap: 8px; }
+}
