@@ -1,0 +1,38 @@
+---
+layout: default
+title: Projects
+permalink: /projects/
+---
+<section class="section section-first">
+  <div class="wrap">
+    <div class="section-head">
+      <h1 class="section-title">All projects</h1>
+      <p class="mono muted">Newest first</p>
+    </div>
+    {% assign projects = site.projects | sort: "order" %}
+    <ol class="cards">
+      {% for p in projects %}
+      <li class="card">
+        <a class="card-link" href="{{ p.url | relative_url }}">
+          <div class="card-media">
+            {% if p.image %}
+            <img src="{{ p.card_image | default: p.image | relative_url }}" alt="" loading="lazy">
+            {% elsif p.art == "flow" %}
+            {% include flow-art.svg %}
+            {% else %}
+            {% include linkage-art.svg %}
+            {% endif %}
+            {% if p.status %}<span class="pill mono">{{ p.status }}</span>{% endif %}
+          </div>
+          <div class="card-body">
+            <p class="card-meta mono"><span class="card-index">{% if forloop.index < 10 %}0{% endif %}{{ forloop.index }}</span>{% if p.course %} · {{ p.course }}{% endif %}{% if p.term %} · {{ p.term }}{% endif %}</p>
+            <h2 class="card-title">{{ p.title }}</h2>
+            <p class="card-text">{{ p.description }}</p>
+            <span class="card-cta mono">Open project &rarr;</span>
+          </div>
+        </a>
+      </li>
+      {% endfor %}
+    </ol>
+  </div>
+</section>
