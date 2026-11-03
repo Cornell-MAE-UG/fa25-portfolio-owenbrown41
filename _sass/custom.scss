@@ -464,3 +464,5 @@ details.data summary { cursor: pointer; color: var(--muted); font-family: var(--
 @media (max-width: 640px) {
   .music-block { grid-template-columns: 1fr; gap: 8px; }
 }
+.music-stat { display: flex; align-items: baseline; gap: 12px; }
+.music-num { font-size: 2.1rem; font-weight: 800; font-variation-settings: "wdth" 112; color: #fff; line-height: 1; letter-spacing: -0.02em; flex: none; }
