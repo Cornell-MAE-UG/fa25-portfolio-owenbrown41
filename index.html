@@ -3,21 +3,15 @@ layout: default
 title: Owen Brown
 body_class: home
 ---
-<section class="hero">
-  <div class="wrap hero-grid">
-    <div class="hero-copy">
-      <p class="eyebrow mono"><span>Mechanical Engineering</span><span>Cornell University</span><span>Class of 2028</span></p>
-      <h1 class="hero-title">Owen<br>Brown</h1>
-      <p class="hero-lede">I design, simulate, and take things apart to see how they work, from e-bike frames to drones. I also row lightweight for Cornell and coach whenever I'm not in the boat.</p>
-      <div class="hero-actions">
-        <a class="btn btn-solid" href="#work">See my work</a>
-        <a class="btn" href="{{ '/cv/' | relative_url }}">Read my CV</a>
-      </div>
+<section class="hero hero-banner" style="--banner: url('{{ '/assets/images/banner-row.jpg' | relative_url }}')">
+  <div class="wrap hero-copy">
+    <p class="eyebrow mono"><span>Mechanical Engineering</span><span>Cornell University</span><span>Class of 2028</span></p>
+    <h1 class="hero-title">Owen<br>Brown</h1>
+    <p class="hero-lede">I design, simulate, and take things apart to see how they work, from e-bike frames to drones. I also row lightweight for Cornell and coach whenever I'm not in the boat.</p>
+    <div class="hero-actions">
+      <a class="btn btn-solid" href="#work">See my work</a>
+      <a class="btn btn-light" href="{{ '/cv/' | relative_url }}">Read my CV</a>
     </div>
-    <figure class="hero-photo">
-      <img src="{{ '/assets/images/DSC06537-Enhanced-NR.jpg' | relative_url }}" alt="Owen rowing for Cornell lightweight crew">
-      <figcaption class="mono">Cornell Lightweight Crew</figcaption>
-    </figure>
   </div>
 </section>
 
@@ -55,13 +49,53 @@ body_class: home
   </div>
 </section>
 
+<section id="last-call" class="section section-music">
+  <div class="wrap music-grid">
+    <figure class="music-photo">
+      <img src="{{ '/assets/images/last-call-concert.jpg' | relative_url }}" alt="Last Call A Cappella singers performing on stage in black and white" loading="lazy">
+      <figcaption class="mono">Last Call A Cappella in concert</figcaption>
+    </figure>
+    <div class="music-copy">
+      <p class="eyebrow mono"><span>Beyond engineering</span><span>Since 2024</span></p>
+      <h2 class="section-title">Last Call A&nbsp;Cappella</h2>
+      <p class="music-lede">I sing with Last Call, an all-male a cappella group at Cornell, and serve as its marketing chair. I also arrange music for the group.</p>
+      <div class="music-blocks">
+        <div class="music-block">
+          <h3 class="mono">Arrangements</h3>
+          <ul>
+            <li><strong>&ldquo;Brandy (You&rsquo;re a Fine Girl)&rdquo;</strong> <span class="tag-done mono">Arranged</span></li>
+            <li>More arrangements in the works <span class="tag-wip mono">In progress</span></li>
+          </ul>
+        </div>
+        <div class="music-block">
+          <h3 class="mono">Concerts</h3>
+          <ul>
+            <li>Sold-out show at Alice Statler Auditorium</li>
+            <li>Performances around Ithaca with local restaurants and other groups</li>
+          </ul>
+        </div>
+        <div class="music-block">
+          <h3 class="mono">Philanthropy</h3>
+          <ul>
+            <li>Philanthropy dinner</li>
+            <li>Collaborations with Ithaca restaurants and community groups</li>
+          </ul>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section id="about" class="section section-about">
   <div class="wrap about-grid">
-    <h2 class="section-title">About</h2>
+    <div class="about-side">
+      <h2 class="section-title">About</h2>
+      <img class="about-photo" src="{{ '/assets/images/DSC06537-Enhanced-NR.jpg' | relative_url }}" alt="Owen rowing for Cornell lightweight crew" loading="lazy">
+    </div>
     <div class="about-copy">
       <p>I'm a junior studying mechanical engineering at Cornell, class of 2028. I row on the men's lightweight crew team.</p>
       <p>I've spent the last two summers coaching. In 2025 I was head coach at the Anchorage Rowing Association in Alaska, running a program of about 50 rowers. In 2026 I came home to coach the varsity boys at Princeton National Rowing Association, the junior program I grew up rowing for.</p>
-      <p>On the engineering side, I'm narrowing my interests toward drone design. Outside of class and the boathouse, I sing a cappella with The Men of Last Call and spend as much time outdoors as I can.</p>
+      <p>On the engineering side, I'm narrowing my interests toward drone design. Outside of class and the boathouse, I sing with Last Call and spend as much time outdoors as I can.</p>
     </div>
     <dl class="facts">
       <div><dt class="mono">Studying</dt><dd>B.S. Mechanical Engineering, Cornell '28</dd></div>
