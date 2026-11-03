@@ -387,3 +387,50 @@ details.data summary { cursor: pointer; color: var(--muted); font-family: var(--
   .card, .btn { transition: none; }
   .card:hover { transform: none; }
 }
+
+// ---------- Photo banner hero (home page) ----------
+// Text sits over the sky; the boat stays visible along the bottom of the banner.
+.hero-banner {
+  position: relative;
+  display: flex; align-items: flex-start;
+  min-height: unquote("min(86vh, 760px)");
+  padding: 64px 0 300px;
+  color: #f7f4ee;
+  background-color: #1d1814;
+  background-image:
+    linear-gradient(90deg, rgba(14, 12, 10, 0.62) 0%, rgba(14, 12, 10, 0.3) 45%, rgba(14, 12, 10, 0) 70%),
+    linear-gradient(180deg, rgba(14, 12, 10, 0.35) 0%, rgba(14, 12, 10, 0) 40%),
+    var(--banner);
+  background-size: cover, cover, cover;
+  background-position: center, center, 50% 30%;
+  border-bottom: 0;
+}
+.hero-banner .hero-copy { position: relative; }
+.hero-banner .eyebrow { color: rgba(247, 244, 238, 0.85); }
+.hero-banner .eyebrow span + span::before { background: rgba(247, 244, 238, 0.5); }
+.hero-banner .hero-title { color: #fff; text-shadow: 0 2px 24px rgba(0, 0, 0, 0.25); font-size: clamp(3.2rem, 8vw, 6.6rem); margin-bottom: 20px; }
+.hero-banner .hero-lede { color: rgba(247, 244, 238, 0.94); max-width: 42ch; margin-bottom: 24px; text-shadow: 0 1px 12px rgba(0, 0, 0, 0.35); }
+.btn-light { border-color: rgba(247, 244, 238, 0.85); color: #f7f4ee; }
+.btn-light:hover { background: #f7f4ee; border-color: #f7f4ee; color: #15171a; }
+.hero-banner .btn-solid:hover { background: #f7f4ee; border-color: #f7f4ee; color: #15171a; }
+
+// Portrait now lives in the About section
+.about-side { display: flex; flex-direction: column; gap: 24px; }
+.about-photo { width: 100%; aspect-ratio: 4 / 5; object-fit: cover; object-position: 50% 30%; border-radius: var(--radius); box-shadow: var(--shadow); }
+
+@media (max-width: 900px) {
+  .about-photo { aspect-ratio: 3 / 2; max-width: 520px; }
+}
+// Phones: show the photo across the top, then the text over the dark water below it
+@media (max-width: 640px) {
+  .hero-banner {
+    min-height: 0;
+    padding: 112vw 0 48px;
+    background-image:
+      linear-gradient(180deg, rgba(29, 24, 20, 0) 58%, #1d1814 99%),
+      var(--banner);
+    background-size: 100% 170vw, 170% auto;
+    background-repeat: no-repeat;
+    background-position: 50% 0, 50% 0;
+  }
+}
